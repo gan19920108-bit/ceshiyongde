@@ -1,6 +1,0 @@
-{
-  "name": "古风文字RPG游戏",
-  "description": "一个采用经典水墨古风美学设计的文字RPG游戏前端，提供高度沉浸式的角色、地图、背包、技能、世界事件、自定义游戏设置，支持Gemini API与SillyTavern消息获取。",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
