@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-serif: "Noto Serif SC", "Georgia", serif;
+  --font-brush: "Ma Shan Zheng", "Kaiti", cursive;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-paper-light: #f5f2eb;
+  --color-paper-dark: #2c2a27;
+  --color-ink-dark: #1f1e1c;
+  --color-ink-medium: #4e4a45;
+  --color-ink-light: #a39e93;
+  --color-ink-gold: #c2a672;
+  --color-ink-red: #8f3434;
+  --color-ink-blue: #3d6e7a;
+  
+  --animate-ink-fade: inkFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-border-draw: borderDraw 0.4s ease forwards;
+}
+
+@keyframes inkFade {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+    filter: blur(2px) contrast(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0) contrast(1);
+  }
+}
+
+@keyframes borderDraw {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(31, 30, 28, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(143, 52, 52, 0.3);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(143, 52, 52, 0.6);
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: #121110;
+  color: #dfdbd3;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Ancient scroll style custom utility classes */
+.parchment-bg {
+  background: radial-gradient(circle at center, #fcfaf2 0%, #f4f0e4 100%);
+  color: #1f1e1c;
+}
+
+.parchment-dark-bg {
+  background: radial-gradient(circle at center, #242220 0%, #1a1918 100%);
+  color: #dfdbd3;
+}
+
+.ink-border {
+  border-image: linear-gradient(to right, #4e4a45, #c2a672, #4e4a45) 1;
+}
+
+.ink-box-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+}
+
+/* Selection style */
+::selection {
+  background: rgba(194, 166, 114, 0.3);
+  color: inherit;
+}
