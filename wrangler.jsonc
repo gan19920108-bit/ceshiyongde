@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ceshiyongde",
+  "compatibility_date": "2026-07-03",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "gufen-rpg"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
